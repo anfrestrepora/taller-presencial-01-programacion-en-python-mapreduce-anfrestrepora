@@ -119,9 +119,6 @@ def save_output(output_directory, sequence):
         for key, value in sequence:
             file.write(f"{key}\t{value}\n")
 
-
-
-#
 # La siguiente función crea un archivo llamado _SUCCESS en el directorio
 # entregado como parámetro.
 #
