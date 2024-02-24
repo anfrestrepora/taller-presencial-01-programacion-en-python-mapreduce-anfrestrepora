@@ -24,9 +24,7 @@ def load_input(input_directory):
             sequence.append((fileinput.filename(), line))
     return sequence
 
-  
-filenames = load_input("input")
-print(filenames[2])
+ 
     
 
 #
@@ -43,20 +41,14 @@ print(filenames[2])
 #
 def mapper(sequence):
     new_sequence=[]
-
     for _, text in sequence:
         words = text.split()
         for word in words:
             word = word.replace(",","")
             word = word.replace(".","")
-            word = word.replace(";","")
             word = word.lower()
             new_sequence.append((word, 1))
     return new_sequence
-
-sequence = load_input("input")
-sequence = mapper(sequence)
-print(sequence)
 
 
 #
@@ -73,11 +65,6 @@ print(sequence)
 def shuffle_and_sort(sequence):
     sorted_sequence = sorted(sequence, key=lambda x: x[0])
     return sorted_sequence
-
-sequence = load_input("input")
-sequence = mapper(sequence)
-sequence = shuffle_and_sort(sequence)
-print(sequence)
 
 #
 # Escriba la función reducer, la cual recibe el resultado de shuffle_and_sort y
@@ -103,11 +90,6 @@ def reducer(sequence):
     return new_sequence
     
 
-sequence = load_input("input")
-sequence = mapper(sequence)
-sequence = shuffle_and_sort(sequence)
-sequence = reducer(sequence)
-print(sequence)
 
 
 #
@@ -122,10 +104,6 @@ def create_output_directory(output_directory):
     if os.path.exists(output_directory):
         raise FileExistsError(f"The directory '{output_directory}' alredy exists.")
     os.makedirs(output_directory)
-
-
-
-
 
 #
 # Escriba la función save_output, la cual almacena en un archivo de texto llamado
