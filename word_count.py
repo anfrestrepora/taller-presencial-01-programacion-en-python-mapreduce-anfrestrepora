@@ -15,6 +15,7 @@
 import glob
 import fileinput
 
+
 def load_input(input_directory):
 
     sequence = []
@@ -141,7 +142,9 @@ def job(input_directory, output_directory):
     save_output(output_directory, sequence)
     create_marker(output_directory)
 
-job(
-    input_directory="input",
-    output_directory="output",
-    )
+if __name__ == "__main__":
+    job(
+    "input",
+    "output",
+)
+
