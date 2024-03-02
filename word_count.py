@@ -25,9 +25,6 @@ def load_input(input_directory):
             sequence.append((fileinput.filename(), line))
     return sequence
 
- 
-    
-
 #
 # Escriba una función llamada maper que recibe una lista de tuplas de la
 # función anterior y retorna una lista de tuplas (clave, valor). En este caso,
@@ -145,3 +142,4 @@ if __name__ == "__main__":
     "output",
 )
 
+  
